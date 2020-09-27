@@ -1,5 +1,10 @@
 # react-a-gate
 
+[![version](https://img.shields.io/npm/v/react-a-gate.svg)](https://www.npmjs.com/package/react-a-gate)
+[![install-size](https://packagephobia.now.sh/badge?p=react-a-gate)](https://packagephobia.now.sh/result?p=react-a-gate)
+[![license](https://img.shields.io/npm/l/react-a-gate.svg)](https://github.com/bonavida/react-a-gate/blob/master/LICENSE)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 ## Overview
 
 `react-a-gate` is a React library for modals, tooltips and popovers. It uses the new React feature called [Portals](https://reactjs.org/docs/portals.html). Basically, a portal (ehem... a gate) allows you to render an element of a child component outside the DOM hierarchy by creating another top-level tree and injecting this component inside it.
