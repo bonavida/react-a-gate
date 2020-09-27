@@ -1,8 +1,8 @@
 {
   "name": "react-a-gate",
   "description": "A React library made with Portals for modals, tooltips and popovers",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "main": "dist/index.js",
   "repository": {
     "type": "git",

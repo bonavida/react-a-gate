@@ -1,4 +1,8 @@
-# react-gate
+# react-a-gate
+
+## Overview
+
+`react-a-gate` is a React library for modals, tooltips and popovers. It uses the new React feature called [Portals](https://reactjs.org/docs/portals.html). Basically, a portal (ehem... a gate) allows you to render an element of a child component outside the DOM hierarchy by creating another top-level tree and injecting this component inside it.
 
 ## Requirements
 
@@ -8,13 +12,13 @@
 ## Installation
 
 ```sh
-npm install react-gate
+npm install react-a-gate
 ```
 
 or
 
 ```sh
-yarn add react-gate
+yarn add react-a-gate
 ```
 
 ## Usage
@@ -24,7 +28,7 @@ yarn add react-gate
 1 . Import `ModalGate` after the installation.
 
 ```js
-import { ModalGate } from 'react-gate';
+import { ModalGate } from 'react-a-gate';
 ```
 
 2 . Add the ModalGate component into your JSX code.
@@ -83,7 +87,7 @@ const App = () => {
 1 . Import `TooltipGate` after the installation.
 
 ```js
-import { TooltipGate } from 'react-gate';
+import { TooltipGate } from 'react-a-gate';
 ```
 
 2 . Add the TooltipGate component into your JSX code.
@@ -125,7 +129,7 @@ const App = () => {
 1 . Import `PopoverGate` after the installation.
 
 ```js
-import { PopoverGate } from 'react-gate';
+import { PopoverGate } from 'react-a-gate';
 ```
 
 2 . Add the PopoverGate component into your JSX code.
@@ -163,3 +167,84 @@ const App = () => {
 | theme                 | String               | `dark`        | Property to set an already defined theme.<br>**Accepted values:** `light` and `dark`.                                                                                                                                                                                                         |
 | offset                | Number               | `10`          | Distance between the trigger element and the popover.                                                                                                                                                                                                                                         |
 | children              | ReactNode            | -             | The trigger element. It can be an HTMLElement or any custom React component. <br>_Required_.                                                                                                                                                                                                  |
+
+### How to override CSS styles
+
+Each component has a few styles by default. In case you want to override them, here are the main classes you need to override on your project:
+
+#### Modal
+
+```
+modal__backdrop
+  >  modal__content
+modal__backdrop--active
+  >  modal__content
+```
+
+#### Tooltip
+
+```
+tooltip__container
+tooltip__arrow
+tooltip__arrow-border
+tooltip__inner
+```
+
+In case you want to customize the colors of the tooltip, here's an example of what you need to do:
+
+```scss
+.red {
+  .tooltip__inner {
+    background-color: #ac2121;
+    border: 1px solid #700404;
+  }
+
+  .tooltip__arrow {
+    border-color: #ac2121;
+  }
+
+  .tooltip__arrow-border {
+    border-color: #700404;
+  }
+}
+```
+
+```jsx
+<TooltipGate content="This is some text" className="red">
+  <button className="App-button">Hover me</button>
+</TooltipGate>
+```
+
+#### Popover
+
+```
+popover__container
+popover__arrow
+popover__arrow-border
+popover__inner
+```
+
+In case you want to customize the colors of the popover, here's an example of what you need to do:
+
+```scss
+.red {
+  .popover__inner {
+    background-color: #ac2121;
+    border: 1px solid #700404;
+  }
+
+  .popover__arrow {
+    border-color: #ac2121;
+  }
+
+  .popover__arrow-border {
+    border-color: #700404;
+  }
+}
+```
+
+```jsx
+<PopoverGate content="This is some text" className="red">
+  <button className="App-button">Click me</button>
+</PopoverGate>
+```
