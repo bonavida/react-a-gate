@@ -2,9 +2,9 @@ import * as React from 'react';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 /** Hooks */
-import usePortal from 'hooks/usePortal';
-import useEscKeydown from 'hooks/useEscKeydown';
-import useLockScroll from 'hooks/useLockScroll';
+import usePortal from '../../hooks/usePortal';
+import useEscKeydown from '../../hooks/useEscKeydown';
+import useLockScroll from '../../hooks/useLockScroll';
 /** Styles */
 import './ModalGate.scss';
 

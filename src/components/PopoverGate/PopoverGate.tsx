@@ -8,10 +8,10 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 /** Hooks */
-import usePortal from 'hooks/usePortal';
-import useResizeObserver from 'hooks/useResizeObserver';
+import usePortal from '../../hooks/usePortal';
+import useResizeObserver from '../../hooks/useResizeObserver';
 /** Utils */
-import { calculatePosition } from 'utils/utils';
+import { calculatePosition } from '../../utils/utils';
 /** Types */
 import { Place, Mode, Theme } from '../../types/types';
 /** Styles */
