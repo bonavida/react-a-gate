@@ -11,9 +11,9 @@ import { createPortal } from 'react-dom';
 import usePortal from 'hooks/usePortal';
 import useResizeObserver from 'hooks/useResizeObserver';
 /** Utils */
-import { calculatePosition } from 'utils';
+import { calculatePosition } from 'utils/utils';
 /** Types */
-import { Place, Mode, Theme } from 'types';
+import { Place, Mode, Theme } from '../../types/types';
 /** Styles */
 import './PopoverGate.scss';
 

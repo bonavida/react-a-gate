@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 
-const useEscKeydown = (onEscKeydown: Function) => {
+const useEscKeydown = (onEscKeydown: { (): void }): void => {
   const onEscKeyDownCallback = useCallback(
     (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return;

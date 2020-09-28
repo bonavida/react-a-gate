@@ -3,7 +3,7 @@ import { useRef, useLayoutEffect } from 'react';
 const useLockScroll = (
   enableLockScroll = false,
   target: HTMLElement = document.body
-) => {
+): void => {
   const overflowStyleRef = useRef('');
 
   useLayoutEffect(() => {

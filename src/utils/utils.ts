@@ -1,4 +1,12 @@
-import { Place } from 'types';
+import { Place } from '../types/types';
+
+type Position = {
+  top: number;
+  left: number;
+  arrowTop: number;
+  arrowLeft: number;
+  place: Place;
+};
 
 export const calculatePosition = (
   triggerRef: React.MutableRefObject<HTMLSpanElement | JSX.Element | null>,
@@ -6,7 +14,7 @@ export const calculatePosition = (
   arrowRef: React.MutableRefObject<HTMLDivElement | null>,
   place: Place,
   offset: number
-) => {
+): Position => {
   let top = 0;
   let left = 0;
   let arrowTop = 0;

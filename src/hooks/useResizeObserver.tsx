@@ -1,6 +1,6 @@
 import { useRef, useLayoutEffect } from 'react';
 
-const useResizeObserver = (target: Element, onResize: Function) => {
+const useResizeObserver = (target: Element, onResize: { (): void }): void => {
   const resizeObserver = useRef<ResizeObserver | null>(null);
 
   useLayoutEffect(() => {

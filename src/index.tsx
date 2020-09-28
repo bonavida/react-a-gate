@@ -1,6 +1,10 @@
-import ModalGate, { ModalGateProps } from './components/ModalGate';
-import TooltipGate, { TooltipGateProps } from './components/TooltipGate';
-import PopoverGate, { PopoverGateProps } from './components/PopoverGate';
+import ModalGate, { ModalGateProps } from './components/ModalGate/ModalGate';
+import TooltipGate, {
+  TooltipGateProps,
+} from './components/TooltipGate/TooltipGate';
+import PopoverGate, {
+  PopoverGateProps,
+} from './components/PopoverGate/PopoverGate';
 
 export {
   ModalGate,

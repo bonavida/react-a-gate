@@ -14,7 +14,7 @@ const createRootElement = (id: string): HTMLDivElement => {
  * Appends element as last child of body.
  * @param {Element} rootElem
  */
-const addRootElement = (rootElem: Element) => {
+const addRootElement = (rootElem: Element): void => {
   if (document.body.lastElementChild) {
     document.body.insertBefore(
       rootElem,
@@ -33,7 +33,7 @@ const addRootElement = (rootElem: Element) => {
  * @param {String} id The id of the target container, e.g 'portal-root'
  * @returns {HTMLDivElement} The DOM node to use as the Portal target.
  */
-const usePortal = (id: string) => {
+const usePortal = (id: string): HTMLDivElement => {
   const rootElemRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

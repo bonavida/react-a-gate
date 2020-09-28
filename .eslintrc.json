@@ -12,7 +12,6 @@
   ],
   "extends": [
     "airbnb",
-    "plugin:import/electron",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
@@ -80,15 +79,18 @@
     "@typescript-eslint/indent": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
-    "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/no-angle-bracket-type-assertion": 0,
-    "@typescript-eslint/camelcase": ["error", {
-      "properties": "never"
-    }]
+    "@typescript-eslint/camelcase": "off",
+    "no-use-before-define": [
+      0
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      1
+    ]
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -102,5 +104,9 @@
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
-  }
+  },
+  "ignorePatterns": [
+    "dist/*",
+    "rollup.config.js"
+  ]
 }

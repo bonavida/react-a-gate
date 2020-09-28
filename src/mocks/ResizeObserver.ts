@@ -1,9 +1,9 @@
 class ResizeObserver {
-  observe = () => undefined;
+  observe = (): void => undefined;
 
-  unobserve = () => undefined;
+  unobserve = (): void => undefined;
 
-  disconnect = () => undefined;
+  disconnect = (): void => undefined;
 }
 
 export default ResizeObserver;
