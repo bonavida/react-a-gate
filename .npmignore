@@ -6,3 +6,6 @@ dist
 .prettierignore
 rollup.config.js
 tsconfig.json
+jest.config.js
+src/jest.setup.ts
+**/*.test.tsx
