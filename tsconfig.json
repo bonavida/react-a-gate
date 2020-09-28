@@ -14,6 +14,7 @@
     "allowJs": false,
     "jsx": "react",
     "declaration": true,
+    "declarationDir": "dist",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -22,15 +23,18 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "esModuleInterop": true
   },
   "include": [
-    "src"
+    "src",
+    "jest.config.js"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "example",
-    "rollup.config.js"
+    "rollup.config.js",
+    "src/**/*.test.(ts|tsx)"
   ]
 }

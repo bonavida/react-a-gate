@@ -35,7 +35,7 @@ export default {
   ],
   plugins: [
     sass(sassOptions),
-    typescript(),
+    typescript({ useTsconfigDeclarationDir: true }),
     includePaths(includePathOptions),
     terser(),
   ],

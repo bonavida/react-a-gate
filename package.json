@@ -31,7 +31,9 @@
     "prettify": "prettier --config ./.prettierrc.json --write \"./**/*.{ts,tsx,js,jsx}\"",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "jest --config ./jest.config.js --watch"
   },
   "peerDependencies": {
     "react": "^16.13.1",
@@ -59,6 +61,9 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.2",
     "node-sass": "^4.14.1",
     "postcss": "^8.1.0",
     "prettier": "^2.1.2",
@@ -70,6 +75,7 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.3",
+    "ts-jest": "^26.4.0",
     "typescript": "^3.9.7"
   },
   "files": [
@@ -90,5 +96,12 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint",
+      "pre-version": "npm run lint && npm test",
+      "pre-publish": "npm run lint && npm test"
+    }
+  }
 }
