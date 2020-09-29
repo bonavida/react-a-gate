@@ -1,4 +1,0 @@
-# Ignore all realted to testing
-jest.config.js
-src/jest.setup.ts
-**/*.test.tsx
