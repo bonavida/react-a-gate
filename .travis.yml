@@ -1,0 +1,35 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+node_js:
+  - 12
+notifications:
+  email:
+    recipients:
+      - gecko.bona@gmail.com
+    on_success: change
+    on_failure: always
+install:
+  - yarn
+
+script:
+  - yarn build
+  - git config --global user.name "Diego Bonavida"
+  - git config --global user.email "gecko.bona@gmail.com"
+  - cd demo
+  - yarn
+  - yarn build
+
+deploy:
+  provider: pages
+  local_dir: demo/build
+  skip_cleanup: true
+  token: $GH_TOKEN
+  keep_history: true
+  on:
+    branch: master
+
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
