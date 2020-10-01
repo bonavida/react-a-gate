@@ -10,11 +10,8 @@ notifications:
       - gecko.bona@gmail.com
     on_success: change
     on_failure: always
-install:
-  - yarn
 
 script:
-  - yarn build
   - git config --global user.name "Diego Bonavida"
   - git config --global user.email "gecko.bona@gmail.com"
   - cd demo
