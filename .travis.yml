@@ -12,12 +12,12 @@ notifications:
     on_failure: always
 
 install:
+  - cd demo
+  - yarn
 
 script:
   - git config --global user.name "Diego Bonavida"
   - git config --global user.email "gecko.bona@gmail.com"
-  - cd demo
-  - yarn
   - yarn build
 
 deploy:
