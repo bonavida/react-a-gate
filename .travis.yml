@@ -11,6 +11,8 @@ notifications:
     on_success: change
     on_failure: always
 
+install:
+
 script:
   - git config --global user.name "Diego Bonavida"
   - git config --global user.email "gecko.bona@gmail.com"
