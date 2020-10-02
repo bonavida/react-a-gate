@@ -9,3 +9,8 @@ lib
 
 npm-debug.log*
 package-lock.json
+
+#demo
+demo/build
+demo/node_modules
+demo/package-lock.json

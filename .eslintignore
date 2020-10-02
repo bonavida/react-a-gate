@@ -1,4 +1,8 @@
-# Ignore all realted to testing
+# Ignore all related to testing
 jest.config.js
 src/jest.setup.ts
 **/*.test.tsx
+
+#Ignore all related to build
+build
+demo/build

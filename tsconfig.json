@@ -38,6 +38,7 @@
     "rollup.config.js",
     "jest.config.js",
     "src/jest.setup.ts",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    "demo"
   ]
 }
