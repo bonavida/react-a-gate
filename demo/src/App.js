@@ -1,27 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-
+import React, { useState } from 'react';
+/** Components */
+import { ModalGate, TooltipGate, PopoverGate } from 'react-a-gate';
+/** Styles */
 import './App.scss';
 
-function App() {
+const Text = () => <div>This is a text</div>;
+
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PopoverGate content={<Text />} place="top">
+          <button type="button" className="App-button">
+            Trigger Popover
+          </button>
+        </PopoverGate>
+        <br />
+        <TooltipGate content={<Text />} place="bottom">
+          <button type="button" className="App-button">
+            Trigger
+          </button>
+        </TooltipGate>
+        <br />
+        <TooltipGate content={<Text />} place="left" className="red">
+          <button type="button" className="App-button">
+            Trigger
+          </button>
+        </TooltipGate>
+        <br />
+        <TooltipGate content={<Text />} place="right" theme="light">
+          <button type="button" className="App-button">
+            Trigger
+          </button>
+        </TooltipGate>
+        <br />
+        <button type="button" className="App-button" onClick={openModal}>
+          Open modal
+        </button>
+        <ModalGate id="app_modal" isOpen={isOpen} onClose={closeModal}>
+          <>
+            <div>This is a modal</div>
+            <button type="button" className="App-button" onClick={closeModal}>
+              Close
+            </button>
+          </>
+        </ModalGate>
       </header>
     </div>
   );
-}
+};
 
 export default App;
