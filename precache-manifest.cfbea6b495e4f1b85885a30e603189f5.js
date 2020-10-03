@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2949d85a4c566796ab52a4e3abfbfe40",
+    "revision": "ddaaf26c4ddacc43188e7461da0d7179",
     "url": "/react-a-gate/index.html"
   },
   {
-    "revision": "2fcf5ab58ba57c55977f",
+    "revision": "5ada9b6c18b1747c1fd5",
     "url": "/react-a-gate/static/css/main.da42e3e8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-a-gate/static/js/2.b829d14b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2fcf5ab58ba57c55977f",
-    "url": "/react-a-gate/static/js/main.95bd3673.chunk.js"
+    "revision": "5ada9b6c18b1747c1fd5",
+    "url": "/react-a-gate/static/js/main.b31f94fc.chunk.js"
   },
   {
     "revision": "47a4dd7245b8e0375ecf",
