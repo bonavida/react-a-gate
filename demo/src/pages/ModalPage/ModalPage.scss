@@ -1,0 +1,74 @@
+@import 'styles/utils.scss';
+
+.modalPage {
+  &__container {
+    pre {
+      padding: 0 1em !important;
+      line-height: 1 !important;
+      overflow: unset !important;
+      border-radius: 4px;
+      min-width: 550px;
+
+      code {
+        padding: 0.5em !important;
+        line-height: 1 !important;
+      }
+
+      span {
+        background: #f5f2f0 !important;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    margin: 20px auto;
+
+    & > * {
+      width: 50%;
+    }
+  }
+
+  &__trigger {
+    @include flexCenter();
+  }
+}
+
+.modal {
+  &__content {
+    padding: 0 !important;
+    border-radius: 4px !important;
+  }
+
+  &__button {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    color: #fff;
+    background-color: #1799bd;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    border-radius: 4px;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+@media #{$min-width-4} {
+  .modalPage__block {
+    max-width: 1200px;
+  }
+}

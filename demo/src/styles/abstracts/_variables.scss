@@ -91,3 +91,26 @@ $text-shadow-white-base: $color-text-white-base 0 1px 0;
 
 $border-radius-regular: 4px;
 $border-radius-rounded: 500px;
+
+/** MEDIA QUERIES */
+
+// Min width lowest mobile resolution
+$min-width-1: 'only screen and (min-width: 320px)';
+// Min width medium mobile resolutions
+$min-width-2: 'only screen and (min-width: 481px)';
+// Min width tablet resolutions
+$min-width-3: 'only screen and (min-width: 768px)';
+// Min width standard for laptops (iPad horizontal)
+$min-width-4: 'only screen and (min-width: 1024px)';
+
+// Max width medium mobile resolutions
+$max-width-1: 'only screen and (max-width: 480px)';
+// Max width mobile resolutions
+$max-width-2: 'only screen and (max-width: 767px)';
+// Max width tablet resolutions
+$max-width-3: 'only screen and (max-width: 1023px)';
+
+// Common intervals
+$min-max-width-1: 'only screen and (min-width: 320px) and (max-width: 480px)';
+$min-max-width-2: 'only screen and (min-width: 481px) and (max-width: 767px)';
+$min-max-width-3: 'only screen and (min-width: 768px) and (max-width: 1023px)';
