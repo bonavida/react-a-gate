@@ -1,0 +1,8 @@
+/*
+ * Base centered flex for containers
+ */
+ @mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

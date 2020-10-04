@@ -9,10 +9,14 @@
   },
   "author": "Diego Bonavida <gecko.bona@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-brands-svg-icons": "^5.15.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-a-gate": "^1.4.2",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

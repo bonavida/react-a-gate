@@ -1,0 +1,14 @@
+@import 'styles/utils.scss';
+
+.layout {
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: 1;
+    padding: $spacing-xs $spacing-m;
+  }
+}
