@@ -33,8 +33,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "test": "jest --config ./jest.config.js",
-    "test:watch": "jest --config ./jest.config.js --watch",
-    "semantic-release": "semantic-release"
+    "test:watch": "jest --config ./jest.config.js --watch"
   },
   "peerDependencies": {
     "react": "^16.13.1",
@@ -79,7 +78,6 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.3",
-    "semantic-release": "^17.1.2",
     "ts-jest": "^26.4.0",
     "typescript": "^3.9.7"
   },

@@ -1,0 +1,93 @@
+/** TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
+
+// Font families
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Lucida Grande', Arial, Helvetica, Verdana, sans-serif;
+
+// Font weights
+$font-weight-light: 400;
+$font-weight-regular: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// Font sizes
+$font-size-xxs: 8px;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-ml: 20px;
+$font-size-l: 24px;
+$font-size-xl: 36px;
+$font-size-xxl: 48px;
+
+// Line heights
+$line-height-m: 1.5;
+
+// Letter spacings
+$letter-spacing-zero: 0;
+$letter-spacing-s: 0.36px;
+$letter-spacing-m: 0.76px;
+$letter-spacing-l: 1.25px;
+$letter-spacing-xl: 1.76px;
+
+/** COLORS */
+
+// Primary colors
+$color-primary: #283e4a;
+
+// Text Black
+$color-text-black-base: #333;
+$color-text-black-brighter-1: #5c5c5c;
+$color-text-black-brighter-2: #838383;
+$color-text-black-darker-1: #000;
+
+// Text White
+$color-text-white-base: #fff;
+$color-text-white-darker-1: #e3e3e3;
+$color-text-white-darker-2: #b2b2b2;
+
+// Border colors
+$border-color-primary: #1a3341;
+
+/** SPACING & MARGIN */
+
+$spacing-xxs: 8px;
+$spacing-xs: 16px;
+$spacing-s: 24px;
+$spacing-m: 32px;
+$spacing-l: 40px;
+$spacing-xl: 48px;
+$spacing-xxl: 56px;
+
+$margin-s: 5px;
+$margin-sm: 8px;
+$margin-m: 10px;
+$margin-l: 15px;
+$margin-xl: 20px;
+$margin-xxl: 30px;
+$margin-xxxl: 40px;
+$margin-xxxxl: 50px;
+
+$padding-s: 5px;
+$padding-sm: 8px;
+$padding-m: 10px;
+$padding-l: 15px;
+$padding-xl: 24px;
+
+/** ELEVATION **/
+
+// Box shadows
+$box-shadow-header: rgba(0, 0, 0, 0.3) 0 2px 5px;
+$box-shadow-primary-button: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+
+// Text shadows
+$text-shadow-white-base: $color-text-white-base 0 1px 0;
+
+/** MISC */
+
+$border-radius-regular: 4px;
+$border-radius-rounded: 500px;
