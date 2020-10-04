@@ -60,12 +60,14 @@
             position: absolute;
             content: '<';
             left: -12px;
+            font-weight: $font-weight-regular;
           }
 
           &:after {
             position: absolute;
             content: '/>';
             left: calc(100% + 2px);
+            font-weight: $font-weight-regular;
           }
         }
       }
@@ -73,6 +75,11 @@
       a {
         text-decoration: none;
         color: $color-text-white-base;
+        font-weight: $font-weight-regular;
+
+        &.active {
+          font-weight: $font-weight-bold;
+        }
 
         &:focus {
           outline: 0;

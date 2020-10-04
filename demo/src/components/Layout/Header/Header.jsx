@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 /** Styles */
 import './Header.scss';
 
@@ -10,13 +10,18 @@ const Header = () => (
     </h1>
     <ul className="header__menu">
       <li className="header__menu-item">
-        <Link to="/modal">Modal</Link>
+        <NavLink
+          to="/modal"
+          isActive={(_, { pathname }) => ['/', '/modal'].includes(pathname)}
+        >
+          Modal
+        </NavLink>
       </li>
       <li className="header__menu-item">
-        <Link to="/tooltip">Tooltip</Link>
+        <NavLink to="/tooltip">Tooltip</NavLink>
       </li>
       <li className="header__menu-item">
-        <Link to="/popover">Popover</Link>
+        <NavLink to="/popover">Popover</NavLink>
       </li>
     </ul>
   </div>
