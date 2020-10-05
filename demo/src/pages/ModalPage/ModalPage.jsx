@@ -4,7 +4,11 @@ import { ModalGate } from 'react-a-gate';
 import Modal from 'components/Modal';
 import CodeBlock from 'components/CodeBlock';
 /** Snippets */
-import { modal_example_1, modal_example_2 } from 'snippets';
+import {
+  modal_example_1,
+  modal_example_2_1,
+  modal_example_2_2,
+} from 'snippets';
 /** Styles */
 import './ModalPage.scss';
 
@@ -67,7 +71,10 @@ const ModalPage = () => {
       </div>
       <hr />
       <div className="modalPage__block">
-        <CodeBlock value={modal_example_2}></CodeBlock>
+        <div>
+          <CodeBlock value={modal_example_2_1}></CodeBlock>
+          <CodeBlock language="sass" value={modal_example_2_2}></CodeBlock>
+        </div>
         <div className="modalPage__trigger custom-modal">
           <button
             type="button"
@@ -78,6 +85,7 @@ const ModalPage = () => {
           </button>
           <ModalGate
             id="app_modal_2"
+            className="custom-modal"
             isOpen={isSecondOpen}
             onClose={closeSecondModal}
           >
