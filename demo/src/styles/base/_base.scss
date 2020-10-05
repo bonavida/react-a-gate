@@ -2,6 +2,12 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +17,34 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+hr {
+  position: relative;
+  border-color: $color-primary;
+  width: 250px;
+  margin: 50px auto;
+  overflow: visible;
+
+  &:before {
+    color: $color-primary;
+    position: absolute;
+    content: '*';
+    right: calc(100% + 10px);
+    bottom: -33px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  &:after {
+    color: $color-primary;
+    position: absolute;
+    content: '*';
+    left: calc(100% + 10px);
+    bottom: -33px;
+    font-weight: 600;
+    font-size: 40px;
+  }
 }
