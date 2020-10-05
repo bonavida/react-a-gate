@@ -12,6 +12,7 @@ export type ModalGateProps = {
   id: string;
   isOpen: boolean;
   rootId?: string;
+  className?: string;
   closeWhenClickOutside?: boolean;
   onClose: () => void;
 };
@@ -20,6 +21,7 @@ const ModalGate: React.FC<ModalGateProps> = ({
   id,
   isOpen,
   rootId = 'portal-root',
+  className,
   closeWhenClickOutside = true,
   onClose,
   children,
@@ -59,7 +61,7 @@ const ModalGate: React.FC<ModalGateProps> = ({
           data-testid="modal_backdrop"
           className={`modal__backdrop${
             isOpen && isActive ? ' modal__backdrop--active' : ''
-          }`}
+          } ${className || ''}`}
           role="dialog"
           aria-labelledby={`modal_gate_${id}`}
           aria-modal="true"
