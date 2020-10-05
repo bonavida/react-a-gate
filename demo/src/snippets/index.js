@@ -1,1 +1,1 @@
-export { modal_example_1, modal_example_2 } from './modal';
+export { modal_example_1, modal_example_2_1, modal_example_2_2 } from './modal';

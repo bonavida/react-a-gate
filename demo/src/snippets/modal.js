@@ -35,39 +35,48 @@ const App = () => {
 };
 `;
 
-export const modal_example_2 = `
-import React, { useState } from 'react';
-import { ModalGate } from 'react-a-gate';
+export const modal_example_2_1 = `
+// To override the default modal styles, you can pass
+// a custom CSS class through the className prop.
+// ...
+<ModalGate
+  id="app_modal_2"
+  className="custom-modal"
+  isOpen={isSecondOpen}
+  onClose={closeSecondModal}
+>
+  <Modal>
+    // ...
+  </Modal>
+</ModalGate>
+// ...
+`;
 
-import Modal from 'components/Modal';
+export const modal_example_2_2 = `
+// And then you can just define your own custom styles.
+// The two main CSS classes are:
+// modal__backdrop (custom-modal will override the css properties from this class)
+// modal__content
 
-const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
+.custom-modal {
+  // Override default styles
+  .modal__content {
+    opacity: 0.9;
+    max-width: 20%;
+    border: none;
+  }
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  // Custom modal styles
+  .modal__header,
+  .modal__body,
+  .modal__footer {
+    color: white;
+    background-color: #333;
+  }
 
-  return (
-    <>
-      <button type="button" className="App-button" onClick={openModal}>
-        Open modal
-      </button>
-      <ModalGate id="app_modal_1" isOpen={isOpen} onClose={closeModal}>
-        <Modal>
-          <Modal.Header onClose={closeModal}>Modal</Modal.Header>
-          <Modal.Body>This is a modal</Modal.Body>
-          <Modal.Footer>
-            <button
-              type="button"
-              className="modal__button"
-              onClick={closeModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-      </ModalGate>
-    </>
-  );
-};
+  .modal__button {
+    background-color: #333;
+    border: 1px solid white;
+  }
+}
 `;
