@@ -1,32 +1,20 @@
 @import 'styles/utils.scss';
 
 .modalPage {
-  &__container {
-    pre {
-      padding: 0 1em !important;
-      line-height: 1 !important;
-      overflow: unset !important;
-      border-radius: 4px;
-      min-width: 550px;
-
-      code {
-        padding: 0.5em !important;
-        line-height: 1 !important;
-      }
-
-      span {
-        background: #f5f2f0 !important;
-        font-size: 12px;
-      }
-    }
-  }
-
   &__block {
     display: flex;
     margin: 20px auto;
 
     & > * {
       width: 50%;
+    }
+
+    &:nth-of-type(odd) {
+      flex-direction: row;
+    }
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
     }
   }
 
@@ -51,7 +39,7 @@
     vertical-align: middle;
     user-select: none;
     color: #fff;
-    background-color: #1799bd;
+    background-color: $color-primary;
     border: 1px solid transparent;
     padding: 5px 15px;
     border-radius: 4px;
@@ -64,6 +52,32 @@
       outline: 0;
       text-decoration: none;
     }
+  }
+
+  &__example {
+    ul {
+      margin-bottom: 0;
+
+      li {
+        &:not(:first-of-type) {
+          margin-top: $margin-m;
+        }
+      }
+    }
+  }
+}
+
+.custom-modal {
+  .modal__content {
+    opacity: 0.9;
+    max-width: 20px;
+    color: white;
+    background-color: #222;
+  }
+
+  .modal__header,
+  .modal__footer {
+    background-color: #333;
   }
 }
 
