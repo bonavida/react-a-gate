@@ -12,10 +12,14 @@ const App = () => {
 
   return (
     <>
+      <!-- Element that triggers the opening of the modal -->
       <button type="button" className="App-button" onClick={openModal}>
         Open modal
       </button>
+      <!-- ModalGate wrapper -->
       <ModalGate id="app_modal_1" isOpen={isOpen} onClose={closeModal}>
+        <!-- Modal here is a component I created only for the purpose of this demo.
+          It can be any React component that you want or any text or container. --> 
         <Modal>
           <Modal.Header onClose={closeModal}>Modal</Modal.Header>
           <Modal.Body>This is a modal</Modal.Body>
@@ -46,7 +50,7 @@ export const modal_example_2_1 = `
   onClose={closeSecondModal}
 >
   <Modal>
-    // ...
+    ...
   </Modal>
 </ModalGate>
 // ...

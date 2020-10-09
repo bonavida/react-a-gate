@@ -23,13 +23,13 @@ code {
 
 hr {
   position: relative;
-  border-color: $color-primary;
+  border-color: $color-secondary;
   width: 250px;
   margin: 50px auto;
   overflow: visible;
 
   &:before {
-    color: $color-primary;
+    color: $color-secondary;
     position: absolute;
     content: '*';
     right: calc(100% + 10px);
@@ -39,7 +39,7 @@ hr {
   }
 
   &:after {
-    color: $color-primary;
+    color: $color-secondary;
     position: absolute;
     content: '*';
     left: calc(100% + 10px);

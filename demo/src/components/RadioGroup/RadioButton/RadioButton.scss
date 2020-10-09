@@ -1,0 +1,68 @@
+@import 'styles/utils.scss';
+
+.radio {
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      .radio__fake-input:after {
+        transform: scale(3.2);
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .radio__fake-input {
+      border-color: $color-primary;
+
+      &:after {
+        transform: scale(1);
+        transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__fake-input {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $color-text-black-brighter-2;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background: $color-primary;
+      transform: scale(0);
+      transition: all 0.2s ease;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+}
