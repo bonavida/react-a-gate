@@ -6,8 +6,8 @@ import Layout from 'components/Layout';
 import routes from './config';
 
 export const Routes = () => (
-  <Switch>
-    <Layout>
+  <Layout>
+    <Switch>
       {/* Routes */}
       {Array.isArray(routes) &&
         routes.map(({ id, path, exact, RouteComponent }) => {
@@ -21,6 +21,6 @@ export const Routes = () => (
           );
         })}
       <Redirect to="/" />
-    </Layout>
-  </Switch>
+    </Switch>
+  </Layout>
 );
