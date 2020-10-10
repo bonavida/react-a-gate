@@ -25,7 +25,6 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-color: #222;
     z-index: 3;
 
     &--top {
@@ -62,7 +61,6 @@
   }
 
   &__arrow-border {
-    border-color: #666;
     z-index: 2;
 
     &.popover__arrow {
@@ -90,13 +88,26 @@
   &__inner {
     max-width: 200px;
     padding: 0.3rem 0.5rem;
-    color: #fff;
     font-size: 0.8em;
     text-align: center;
+    border-radius: 0.25rem;
+  }
+}
+
+.dark {
+  .popover__inner {
     background-color: #222;
     border: 1px solid #666;
-    border-radius: 0.25rem;
+    color: #fff;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .popover__arrow {
+    border-color: #222;
+  }
+
+  .popover__arrow-border {
+    border-color: #666;
   }
 }
 

@@ -35,7 +35,7 @@ const PopoverGate: React.FC<PopoverGateProps> = ({
   place = 'top',
   mode = 'click',
   closeWhenClickOutside = true,
-  theme,
+  theme = 'dark',
   offset = 10,
   children,
 }) => {
@@ -126,7 +126,7 @@ const PopoverGate: React.FC<PopoverGateProps> = ({
       })}
       {showPopover &&
         createPortal(
-          <div className={className || theme || 'popover'}>
+          <div className={`${theme} ${className || ''}`}>
             <div
               ref={popoverRef}
               className={`popover__container popover__container--${placePopover}`}

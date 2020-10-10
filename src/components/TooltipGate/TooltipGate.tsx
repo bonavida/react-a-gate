@@ -25,7 +25,7 @@ const TooltipGate: React.FC<TooltipGateProps> = ({
   className,
   content,
   place = 'top',
-  theme,
+  theme = 'dark',
   offset = 10,
   children,
 }) => {
@@ -75,7 +75,7 @@ const TooltipGate: React.FC<TooltipGateProps> = ({
       })}
       {showTooltip &&
         createPortal(
-          <div className={className || theme || 'tooltip'}>
+          <div className={`${theme} ${className || ''}`}>
             <div
               ref={tooltipRef}
               className={`tooltip__container tooltip__container--${placeTooltip}`}

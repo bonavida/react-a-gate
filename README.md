@@ -82,6 +82,7 @@ const App = () => {
 | --------------------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | id                    | String   | -             | Identificator for the modal.<br>_Required_.                                                                                                                                    |
 | rootId                | String   | `portal-root` | Identificator for the portal. If you already have a different root included in your HTML code, just put here the element id. If not, a new one will be created.                |
+| className             | String   | -             | Property used to override the default CSS styles with custom ones.                                                                                                             |
 | isOpen                | Boolean  | `false`       | Property used to show and hide the modal.<br>_Required_.                                                                                                                       |
 | closeWhenClickOutside | Boolean  | `true`        | Enable or disable the closing of the modal when the user clicks outside.                                                                                                       |
 | onClose               | Function | -             | Function that triggers the closing of the modal. It is used to close the modal when the user clicks outside the modal and when the user pressed the Escape key.<br>_Required_. |
@@ -126,7 +127,7 @@ const App = () => {
 | place     | String               | `top`         | Property to set where the tooltip will be placed.<br>**Accepted values:** `top`, `bottom`, `left` and `right`.                                                  |
 | theme     | String               | `dark`        | Property to set an already defined theme.<br>**Accepted values:** `light` and `dark`.                                                                           |
 | offset    | Number               | `10`          | Distance between the trigger element and the tooltip.                                                                                                           |
-| children  | ReactNode            | -             | The trigger element. It can be an HTMLElement or any custom React component. <br>_Required_.                                                                    |  |
+| children  | ReactNode            | -             | The trigger element. It can be an HTMLElement or any custom React component. <br>_Required_.                                                                    |
 
 ### Popover
 
