@@ -49,6 +49,8 @@ export const calculatePosition = (
   const ty = trRect.y; // most top y
   const by = trRect.y + trRect.height; // most bottom y
 
+  const { scrollX, scrollY } = window;
+
   if (
     Number.isNaN(rx) ||
     Number.isNaN(lx) ||
@@ -64,96 +66,96 @@ export const calculatePosition = (
     };
   }
 
-  const bRight = rx + ttRect.width <= window.scrollX + docWidth;
+  const bRight = rx + ttRect.width <= scrollX + docWidth;
   const bLeft = lx - ttRect.width >= 0;
   const bAbove = ty - ttRect.height >= 0;
-  const bBelow = by + ttRect.height <= window.scrollY + docHeight;
+  const bBelow = by + ttRect.height <= scrollY + docHeight;
 
   switch (place) {
     case 'top':
       if (bAbove) {
-        top = ty - ttRect.height - offset;
+        top = ty - ttRect.height - offset + scrollY;
         arrowTop = top + ttRect.height;
       } else {
-        top = by + offset;
+        top = by + offset + scrollY;
         arrowTop = top - arrRect.height;
         newPlace = 'bottom';
       }
       // Initial left position for tooltip
-      left = lx + (trRect.width - ttRect.width) / 2;
-      arrowLeft = lx + (trRect.width - arrRect.width) / 2;
+      left = lx + scrollX + (trRect.width - ttRect.width) / 2;
+      arrowLeft = lx + scrollX + (trRect.width - arrRect.width) / 2;
 
       // Check if it will render outside the window and recalculate
-      if (left + ttRect.width > docWidth) {
-        left = rx - ttRect.width;
+      if (left + ttRect.width > docWidth + scrollX) {
+        left = rx - ttRect.width + scrollX;
       } else if (left < 0) {
-        left = lx;
+        left = lx + scrollX;
       }
 
       break;
 
     case 'bottom':
       if (bBelow) {
-        top = by + offset;
+        top = by + offset + scrollY;
         arrowTop = top - arrRect.height;
       } else {
-        top = ty - ttRect.height - offset;
+        top = ty - ttRect.height - offset + scrollY;
         arrowTop = top + ttRect.height;
         newPlace = 'top';
       }
       // Initial left position for tooltip
-      left = lx + (trRect.width - ttRect.width) / 2;
-      arrowLeft = lx + (trRect.width - arrRect.width) / 2;
+      left = lx + scrollX + (trRect.width - ttRect.width) / 2;
+      arrowLeft = lx + scrollX + (trRect.width - arrRect.width) / 2;
 
       // Check if it will render outside the window and recalculate
-      if (left + ttRect.width > docWidth) {
-        left = rx - ttRect.width;
+      if (left + ttRect.width > docWidth + scrollX) {
+        left = rx - ttRect.width + scrollX;
       } else if (left < 0) {
-        left = lx;
+        left = lx + scrollX;
       }
 
       break;
 
     case 'left':
       if (bLeft) {
-        left = lx - ttRect.width - offset;
+        left = lx - ttRect.width - offset + scrollX;
         arrowLeft = left + ttRect.width;
       } else {
-        left = rx + offset;
+        left = rx + offset + scrollX;
         arrowLeft = left - arrRect.width;
         newPlace = 'right';
       }
       // Initial top position for tooltip
-      top = ty + (trRect.height - ttRect.height) / 2;
-      arrowTop = ty + (trRect.height - arrRect.height) / 2;
+      top = ty + scrollY + (trRect.height - ttRect.height) / 2;
+      arrowTop = ty + scrollY + (trRect.height - arrRect.height) / 2;
 
       // Check if it will render outside the window and recalculate
-      if (top + ttRect.height > docHeight) {
-        top = by - ttRect.height;
+      if (top + ttRect.height > docHeight + scrollY) {
+        top = by - ttRect.height + scrollY;
       } else if (top < 0) {
-        top = ty;
+        top = ty + scrollY;
       }
 
       break;
 
     case 'right':
       if (bRight) {
-        left = rx + offset;
+        left = rx + offset + scrollX;
         arrowLeft = left - arrRect.width;
       } else {
-        left = lx - ttRect.width - offset;
+        left = lx - ttRect.width - offset + scrollX;
         arrowLeft = left + ttRect.width;
         newPlace = 'left';
       }
       // Initial top position for tooltip
-      top = ty + (trRect.height - ttRect.height) / 2;
-      arrowTop = ty + (trRect.height - arrRect.height) / 2;
+      top = ty + scrollY + (trRect.height - ttRect.height) / 2;
+      arrowTop = ty + scrollY + (trRect.height - arrRect.height) / 2;
 
       // Check if it will render outside the window and recalculate
-      if (top + ttRect.height > docHeight) {
-        top = by - ttRect.height;
+      if (top + ttRect.height > docHeight + scrollY) {
+        top = by - ttRect.height + scrollY;
       } else if (top < 0) {
-        top = ty;
+        top = ty + scrollY;
       }
 
       break;
