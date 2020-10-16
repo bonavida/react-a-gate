@@ -27,3 +27,33 @@ const App = () => (
   </TooltipGate>
 );
 `;
+
+export const tooltip_example_2 = `
+// Custom CSS class that overrides the default styles
+.custom-tooltip {
+  .tooltip__inner {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3em;
+  }
+}
+
+// Other custom CSS class to override the default colors.
+// The main classes are:
+// - tooltip__inner: The content of the tooltip
+// - tooltip__arrow, tooltip__arrow-border: The tooltip arrow
+.blue {
+  .tooltip__inner {
+    background-color: #1799bd;
+    border: 1px solid #afebff;
+  }
+
+  .tooltip__arrow {
+    border-color: #1799bd;
+  }
+
+  .tooltip__arrow-border {
+    border-color: #afebff;
+  }
+}
+`;

@@ -8945,10 +8945,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-a-gate@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-a-gate/-/react-a-gate-1.2.1.tgz#ecedbb27d3436276ac2fa9e05fe3fdeab082fe33"
-  integrity sha512-UPgPlhvJe9A+BSsuessIfJSlLWCxie/2uUY/PQP7fy5B91nJltvnufn1amGMc3duZO8Ms+LjBV1ILo4fA5Pe5w==
+react-a-gate@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-a-gate/-/react-a-gate-1.3.0.tgz#ebbc42a7bd4623f89dfd11547a4adca4b9471efa"
+  integrity sha512-V+nS4Gbc1kvx+vgdCthB670v2JZJsQYVuvD29Ye4d7CY/kwOefqRdaLvbHDyLwpeXNm0yLu35SQdw8XXOItPDQ==
 
 react-app-polyfill@^1.0.6:
   version "1.0.6"
