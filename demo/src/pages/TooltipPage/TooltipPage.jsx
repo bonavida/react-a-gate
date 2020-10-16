@@ -5,7 +5,7 @@ import CodeBlock from 'components/CodeBlock';
 import RadioGroup from 'components/RadioGroup';
 import Checkbox from 'components/Checkbox';
 /** Snippets */
-import { tooltip_example_1 } from 'snippets';
+import { tooltip_example_1, tooltip_example_2 } from 'snippets';
 /** Styles */
 import './TooltipPage.scss';
 
@@ -23,6 +23,11 @@ const defaultTooltipPositions = [
   { label: 'Right', value: 'right' },
 ];
 
+const defaultThemes = [
+  { label: 'Dark', value: 'dark' },
+  { label: 'Light', value: 'light' },
+];
+
 const TooltipContent = () => (
   <div>
     I am a <span style={{ color: '#ffd500' }}>tooltip</span>. Every time you
@@ -35,6 +40,7 @@ const TooltipContent = () => (
 const TooltipPage = () => {
   const [triggerPosition, setTriggerPosition] = useState('top');
   const [tooltipPosition, setTooltipPosition] = useState('top');
+  const [theme, setTheme] = useState('dark');
   const [isCustom, setIsCustom] = useState(false);
 
   const changeTriggerPosition = useCallback((position) => {
@@ -47,6 +53,14 @@ const TooltipPage = () => {
 
   const changeUseCustom = useCallback((value) => {
     setIsCustom(value);
+
+    if (!value) {
+      setTheme('dark');
+    }
+  }, []);
+
+  const changeTheme = useCallback((theme) => {
+    setTheme(theme);
   }, []);
 
   return (
@@ -70,6 +84,17 @@ const TooltipPage = () => {
             />
           </div>
           <div className="tooltipPage__block">
+            {!isCustom && (
+              <>
+                <h5>Theme:</h5>
+                <RadioGroup
+                  name="tooltip_theme"
+                  options={defaultThemes}
+                  initialValue="dark"
+                  onChange={changeTheme}
+                />
+              </>
+            )}
             <Checkbox
               id="custom__tooltip"
               value="custom_tooltip"
@@ -81,10 +106,12 @@ const TooltipPage = () => {
           </div>
         </div>
         <CodeBlock value={tooltip_example_1}></CodeBlock>
+        <CodeBlock language="sass" value={tooltip_example_2}></CodeBlock>
       </div>
       <TooltipGate
         content={<TooltipContent />}
         place={tooltipPosition}
+        theme={theme}
         className={`custom-tooltip${isCustom ? ' blue' : ''}`}
       >
         <button
