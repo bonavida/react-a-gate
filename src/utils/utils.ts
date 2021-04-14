@@ -1,34 +1,19 @@
-import { Place } from '../types/types';
+import { PositionAttrs, PositionParams } from 'types';
 
-type Position = {
-  top: number;
-  left: number;
-  arrowTop: number;
-  arrowLeft: number;
-  place: Place;
-};
-
-export const calculatePosition = (
-  triggerRef: React.MutableRefObject<HTMLSpanElement | JSX.Element | null>,
-  portalRef: React.MutableRefObject<HTMLDivElement | null>,
-  arrowRef: React.MutableRefObject<HTMLDivElement | null>,
-  place: Place,
-  offset: number
-): Position => {
+export const calculatePosition = ({
+  triggerRef,
+  portalRef,
+  arrowRef,
+  place,
+  offset,
+}: PositionParams): PositionAttrs => {
   let top = 0;
   let left = 0;
   let arrowTop = 0;
   let arrowLeft = 0;
   let newPlace = place;
 
-  if (
-    !portalRef ||
-    !portalRef.current ||
-    !triggerRef ||
-    !triggerRef.current ||
-    !arrowRef ||
-    !arrowRef.current
-  ) {
+  if (!portalRef?.current || !triggerRef?.current || !arrowRef?.current) {
     return {
       top,
       left,
@@ -66,10 +51,10 @@ export const calculatePosition = (
     };
   }
 
-  const bRight = rx + ttRect.width <= scrollX + docWidth;
+  const bRight = rx + ttRect.width + offset + scrollX <= scrollX + docWidth;
   const bLeft = lx - ttRect.width >= 0;
   const bAbove = ty - ttRect.height >= 0;
-  const bBelow = by + ttRect.height <= scrollY + docHeight;
+  const bBelow = by + ttRect.height + offset + scrollY <= scrollY + docHeight;
 
   switch (place) {
     case 'top':

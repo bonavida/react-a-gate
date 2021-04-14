@@ -13,7 +13,7 @@ import useResizeObserver from '../../hooks/useResizeObserver';
 /** Utils */
 import { calculatePosition } from '../../utils/utils';
 /** Types */
-import { Place, Mode, Theme } from '../../types/types';
+import { PositionAttrs, Place, Mode, Theme } from '../../types/types';
 /** Styles */
 import './PopoverGate.scss';
 
@@ -69,7 +69,13 @@ const PopoverGate: React.FC<PopoverGateProps> = ({
         arrowTop,
         arrowLeft,
         place: newPlace,
-      } = calculatePosition(triggerRef, popoverRef, arrowRef, place, offset);
+      }: PositionAttrs = calculatePosition({
+        triggerRef,
+        portalRef: popoverRef,
+        arrowRef,
+        place,
+        offset,
+      });
       setCoords({ top, left });
       setArrowCords({ top: arrowTop, left: arrowLeft });
       setPlacePopover(newPlace);
