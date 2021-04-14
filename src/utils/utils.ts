@@ -1,4 +1,4 @@
-import { PositionAttrs, PositionParams } from 'types';
+import { PositionAttrs, PositionParams } from '../types/types';
 
 export const calculatePosition = ({
   triggerRef,
