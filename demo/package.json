@@ -13,13 +13,13 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-a-gate": "^1.4.2",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "react-syntax-highlighter": "^15.0.1"
+    "react-scripts": "3.4.4",
+    "react-syntax-highlighter": "^15.0.1",
+    "sass": "^1.32.8"
   },
   "scripts": {
     "start": "react-scripts start",
