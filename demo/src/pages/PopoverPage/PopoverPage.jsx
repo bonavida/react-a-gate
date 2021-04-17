@@ -125,6 +125,8 @@ const PopoverPage = () => {
         </div>
         <CodeBlock value={popover_example_1}></CodeBlock>
         <CodeBlock language="sass" value={popover_example_2}></CodeBlock>
+        <br/>
+        <br/>
       </div>
       <div className={`popoverPage__button-wrapper popoverPage__button-wrapper--${triggerPosition}`}>
         <PopoverGate

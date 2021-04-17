@@ -107,6 +107,8 @@ const TooltipPage = () => {
         </div>
         <CodeBlock value={tooltip_example_1}></CodeBlock>
         <CodeBlock language="sass" value={tooltip_example_2}></CodeBlock>
+        <br/>
+        <br/>
       </div>
       <div className={`tooltipPage__button-wrapper tooltipPage__button-wrapper--${triggerPosition}`}>
         <TooltipGate
