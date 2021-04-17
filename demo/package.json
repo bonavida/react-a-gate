@@ -1,6 +1,6 @@
 {
   "name": "react-a-gate-demo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "homepage": "https://bonavida.github.io/react-a-gate",
   "repository": {
@@ -9,11 +9,17 @@
   },
   "author": "Diego Bonavida <gecko.bona@gmail.com>",
   "dependencies": {
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-a-gate": "^1.4.2",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-brands-svg-icons": "^5.15.0",
+    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "react": "^16.14.0",
+    "react-a-gate": "^1.5.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.4",
+    "react-syntax-highlighter": "^15.0.1",
+    "sass": "^1.32.8"
   },
   "scripts": {
     "start": "react-scripts start",

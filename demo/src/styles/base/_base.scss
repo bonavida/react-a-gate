@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+hr {
+  position: relative;
+  border-color: $color-secondary;
+  width: 250px;
+  margin: 50px auto;
+  overflow: visible;
+
+  &:before {
+    color: $color-secondary;
+    position: absolute;
+    content: '*';
+    right: calc(100% + 10px);
+    bottom: -33px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  &:after {
+    color: $color-secondary;
+    position: absolute;
+    content: '*';
+    left: calc(100% + 10px);
+    bottom: -33px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+}

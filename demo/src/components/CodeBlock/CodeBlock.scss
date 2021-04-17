@@ -1,0 +1,19 @@
+pre.codeblock {
+  padding: 0 1em !important;
+  line-height: 1 !important;
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+  border-radius: 4px;
+  min-width: 550px;
+  border: 1px solid #ddd;
+
+  code {
+    padding: 0.5em !important;
+    line-height: 1 !important;
+  }
+
+  span {
+    background: #f5f2f0 !important;
+    font-size: 12px;
+  }
+}

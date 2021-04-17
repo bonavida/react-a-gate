@@ -1,0 +1,15 @@
+@import 'styles/utils.scss';
+
+.layout {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__content {
+    position: relative;
+    padding: $spacing-s $spacing-xl;
+    overflow-y: auto;
+  }
+}
