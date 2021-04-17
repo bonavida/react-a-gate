@@ -16,12 +16,17 @@
   &__title {
     margin: 0;
     font-size: $font-size-l;
-    font-weight: $font-weight-semi-bold;
+    font-weight: $font-weight-extra-bold;
     user-select: none;
 
     a {
       text-decoration: none;
       color: $color-text-white-base;
+
+      span {
+        font-size: $font-size-ml;
+        font-weight: $font-weight-light;
+      }
     }
   }
 
