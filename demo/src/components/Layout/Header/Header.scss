@@ -55,6 +55,7 @@
       &:hover {
         a {
           position: relative;
+          transition: all 0.2s ease;
 
           &:before {
             position: absolute;

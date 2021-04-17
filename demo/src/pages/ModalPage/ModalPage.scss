@@ -1,9 +1,18 @@
 @import 'styles/utils.scss';
 
 .modalPage {
+  &__example {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  &__title span {
+    font-weight: 500;
+  }
+
   &__block {
     display: flex;
-    margin: 20px auto;
 
     & > * {
       width: 50%;
@@ -70,8 +79,8 @@
 .custom-modal {
   .modal__content {
     opacity: 0.9;
-    max-width: 20%;
-    border: none;
+    max-width: 600px;
+    border: 1px solid #e6e6e6;
   }
 
   .modal__header,
@@ -88,7 +97,27 @@
 }
 
 @media #{$min-width-4} {
-  .modalPage__block {
+  .modalPage__example {
     max-width: 1200px;
+  }
+}
+
+@media #{$max-width-2} {
+  .modalPage {
+    &__block {
+      display: block;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    &__trigger {
+      margin-top: 25px;
+    }
+  }
+
+  pre.codeblock {
+    min-width: 100%;
   }
 }

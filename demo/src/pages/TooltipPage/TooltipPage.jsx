@@ -108,19 +108,21 @@ const TooltipPage = () => {
         <CodeBlock value={tooltip_example_1}></CodeBlock>
         <CodeBlock language="sass" value={tooltip_example_2}></CodeBlock>
       </div>
-      <TooltipGate
-        content={<TooltipContent />}
-        place={tooltipPosition}
-        theme={theme}
-        className={`custom-tooltip${isCustom ? ' blue' : ''}`}
-      >
-        <button
-          type="button"
-          className={`tooltipPage__button tooltipPage__button--${triggerPosition}`}
+      <div className={`tooltipPage__button-wrapper tooltipPage__button-wrapper--${triggerPosition}`}>
+        <TooltipGate
+          content={<TooltipContent />}
+          place={tooltipPosition}
+          theme={theme}
+          className={`custom-tooltip${isCustom ? ' blue' : ''}`}
         >
-          Hover me
-        </button>
-      </TooltipGate>
+          <button
+            type="button"
+            className="tooltipPage__button"
+          >
+            Hover me
+          </button>
+        </TooltipGate>
+      </div>
     </div>
   );
 };
