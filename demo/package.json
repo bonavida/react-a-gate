@@ -1,6 +1,6 @@
 {
   "name": "react-a-gate-demo",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": false,
   "homepage": "https://react-a-gate.bonavida.dev",
   "repository": {
@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "react": "^16.14.0",
-    "react-a-gate": "^1.5.0",
+    "react-a-gate": "^1.5.1",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
