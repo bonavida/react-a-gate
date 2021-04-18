@@ -43,7 +43,7 @@ export const popover_example_2 = `
 // The main classes are:
 // - popover__inner: The content of the popover
 // - popover__arrow, popover__arrow-border: The popover arrow
-.blue {
+.custom-popover.blue {
   .popover__inner {
     background-color: #1799bd;
     border: 1px solid #afebff;

@@ -42,7 +42,7 @@ export const tooltip_example_2 = `
 // The main classes are:
 // - tooltip__inner: The content of the tooltip
 // - tooltip__arrow, tooltip__arrow-border: The tooltip arrow
-.blue {
+.custom-tooltip.blue {
   .tooltip__inner {
     background-color: #1799bd;
     border: 1px solid #afebff;

@@ -131,19 +131,19 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.3em;
   }
-}
 
-.blue {
-  .popover__inner {
-    background-color: #1799bd;
-    border: 1px solid #afebff;
-  }
+  &.blue {
+    .popover__inner {
+      background-color: #1799bd;
+      border: 1px solid #afebff;
+    }
 
-  .popover__arrow {
-    border-color: #1799bd;
-  }
+    .popover__arrow {
+      border-color: #1799bd;
+    }
 
-  .popover__arrow-border {
-    border-color: #afebff;
+    .popover__arrow-border {
+      border-color: #afebff;
+    }
   }
 }
